@@ -14,11 +14,12 @@ const fetchMangaSearch = async (name) => {
     mangaList.each((index, element) => {
       const img = $(element).find("img").attr("src");
       const title = $(element).find(".item-title").text().trim();
-
+      const link = $(element).find(".item-title").attr("href")
       MangaSearch.push({
         id: index + 1,
         title:title,
         img: img,
+        link:link,
       });
     });
 
