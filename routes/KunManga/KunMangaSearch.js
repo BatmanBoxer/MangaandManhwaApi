@@ -24,7 +24,7 @@ const fetchMangaSearch = async (name) => {
       });
     });
 
-    return MangaSearch.length > 0 ? MangaSearch : { error: "No manga found" };
+    return MangaSearch.length > 0 ? MangaSearch : [];
   } catch (error) {
     return { error: "Server Error Contact Darwin" };
   }
